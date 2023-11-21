@@ -19,3 +19,13 @@
         name: apache2
         enable: true
         state: started
+
+    - name: Create applogs directory
+      file:
+        path: /applogs
+        state: directory
+        mode: 0750
+        owner: root
+        group: root
+    - name: Mount all the disk
+      command: mount -a
