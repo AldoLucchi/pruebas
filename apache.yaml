@@ -1,5 +1,5 @@
-- name: Install Apache
-  host: webservers
+- name: Configure server
+  hosts: webservers
   become: true
 
   tasks:
